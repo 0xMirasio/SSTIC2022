@@ -1,0 +1,1992 @@
+STORE 0x2087c -> VM_MEM
+STORE 0x20000 -> VM_MEM
+STORE 0x1f -> VM_MEM
+STORE 0x2043e -> VM_MEM
+LOAD_ADDR 0x2043e -> R0
+STORE 0x2043e -> VM_MEM
+LOAD R0 <-- 65536
+STORE 0x10000 -> VM_MEM
+LOAD R0 <-- 0
+STORE 0x0 -> VM_MEM
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x0 -> R0
+LOAD_ADDR 0x1f -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x114
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x10000 -> R0
+LOAD_ADDR 0x1f -> R1
+LOAD_ADDR 0x0 -> R2
+BORING HANDLER LOAD
+PREPARE_FUN_ARGS
+CALL FUN compare arg1_arg2
+PUSH FUN RETURN
+STORE 0x1f -> VM_MEM
+LOAD_ADDR 0x2043e -> R0
+STORE 0x2043e -> VM_MEM
+LOAD_ADDR 0x2043e -> R0
+LOAD R1 <-- 3
+TEST [0x2043e] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x20441 + ?
+else:
+  LOAD R0 <-- 0x20441
+STORE 0x20441 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x20000 -> R1
+LOAD_ADDR 0x0 -> R2
+LOAD_ADDR 0x1f -> R3
+TEST [0x0] -> 3 == 255
+if NOT EFLAGS:
+  LOAD R3 <-- 0x1f + ?
+else:
+  LOAD R3 <-- 0x1f
+LOAD_ADDR 0x20441 -> R4
+PREPARE_FUN_ARGS
+CALL FUN 0x555555556e9c
+STORE 0x0 -> VM_MEM
+STORE 0x2087c -> VM_MEM
+STORE 0x20000 -> VM_MEM
+STORE 0x0 -> VM_MEM
+STORE 0x1f -> VM_MEM
+STORE 0x20441 -> VM_MEM
+LOAD_ADDR 0x20441 -> R0
+STORE 0x20441 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
+PREPARE_FUN_ARGS
+CALL FUN fill arg1 8192 0xFFFFE000
+PUSH FUN RETURN
+LOAD_ADDR 0x2087c -> R0
+LOAD R1 <-- 9508
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x22da0 + ?
+else:
+  LOAD R0 <-- 0x22da0
+LOAD R4 <-- 0
+STORE 0x0 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
+LOAD R5 <-- 9512
+TEST [0x2087c] -> 5 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x22da4 + ?
+else:
+  LOAD R0 <-- 0x22da4
+STORE 0x0 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x20000 -> R1
+LOAD_ADDR 0x0 -> R2
+LOAD_ADDR 0x1f -> R3
+PREPARE_FUN_ARGS
+CALL FUN main_compression
+PUSH FUN RETURN
+LOAD_ADDR 0x20441 -> R0
+LOAD_ADDR 0x2087c -> R1
+TEST [0x2087c] -> 5 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555a57
+PUSH FUN RETURN
+LOAD_ADDR 0x20441 -> R0
+LOAD R1 <-- 3
+TEST [0x20441] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x20444 + ?
+else:
+  LOAD R0 <-- 0x20444
+STORE 0x20444 -> VM_MEM
+LOAD_ADDR 0x20444 -> R0
+STORE 0x20444 -> VM_MEM
+LOAD_ADDR 0x20444 -> R0
+TEST [0x20444] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x20447 + ?
+else:
+  LOAD R0 <-- 0x20447
+STORE 0x20447 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x20447 -> R1
+PREPARE_FUN_ARGS
+LOAD R2 <-- 256
+CALL FUN 0x555555555bce
+PUSH FUN RETURN
+STORE 0x0 -> VM_MEM
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x0 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x0 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087c + ?
+else:
+  LOAD R1 <-- 0x2087c
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x0 -> R0
+LOAD R1 <-- 1
+TEST [0x0] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x1 + ?
+else:
+  LOAD R0 <-- 0x1
+STORE 0x1 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x1 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x1 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087d + ?
+else:
+  LOAD R1 <-- 0x2087d
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x1 -> R0
+LOAD R1 <-- 1
+TEST [0x1] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x2 + ?
+else:
+  LOAD R0 <-- 0x2
+STORE 0x2 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x2 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x2 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087e + ?
+else:
+  LOAD R1 <-- 0x2087e
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2 -> R0
+LOAD R1 <-- 1
+TEST [0x2] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x3 + ?
+else:
+  LOAD R0 <-- 0x3
+STORE 0x3 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x3 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x3 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087f + ?
+else:
+  LOAD R1 <-- 0x2087f
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x3 -> R0
+LOAD R1 <-- 1
+TEST [0x3] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x4 + ?
+else:
+  LOAD R0 <-- 0x4
+STORE 0x4 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x4 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x4 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20880 + ?
+else:
+  LOAD R1 <-- 0x20880
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x4 -> R0
+LOAD R1 <-- 1
+TEST [0x4] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x5 + ?
+else:
+  LOAD R0 <-- 0x5
+STORE 0x5 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x5 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x5 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20881 + ?
+else:
+  LOAD R1 <-- 0x20881
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x5 -> R0
+LOAD R1 <-- 1
+TEST [0x5] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x6 + ?
+else:
+  LOAD R0 <-- 0x6
+STORE 0x6 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x6 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x6 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20882 + ?
+else:
+  LOAD R1 <-- 0x20882
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x6 -> R0
+LOAD R1 <-- 1
+TEST [0x6] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x7 + ?
+else:
+  LOAD R0 <-- 0x7
+STORE 0x7 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x7 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x7 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20883 + ?
+else:
+  LOAD R1 <-- 0x20883
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x7 -> R0
+LOAD R1 <-- 1
+TEST [0x7] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x8 + ?
+else:
+  LOAD R0 <-- 0x8
+STORE 0x8 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x8 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x8 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20884 + ?
+else:
+  LOAD R1 <-- 0x20884
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x8 -> R0
+LOAD R1 <-- 1
+TEST [0x8] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x9 + ?
+else:
+  LOAD R0 <-- 0x9
+STORE 0x9 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x9 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x9 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20885 + ?
+else:
+  LOAD R1 <-- 0x20885
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x9 -> R0
+LOAD R1 <-- 1
+TEST [0x9] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xa + ?
+else:
+  LOAD R0 <-- 0xa
+STORE 0xa -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xa -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xa -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20886 + ?
+else:
+  LOAD R1 <-- 0x20886
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xa -> R0
+LOAD R1 <-- 1
+TEST [0xa] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xb + ?
+else:
+  LOAD R0 <-- 0xb
+STORE 0xb -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xb -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xb -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20887 + ?
+else:
+  LOAD R1 <-- 0x20887
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xb -> R0
+LOAD R1 <-- 1
+TEST [0xb] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xc + ?
+else:
+  LOAD R0 <-- 0xc
+STORE 0xc -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xc -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xc -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20888 + ?
+else:
+  LOAD R1 <-- 0x20888
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xc -> R0
+LOAD R1 <-- 1
+TEST [0xc] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xd + ?
+else:
+  LOAD R0 <-- 0xd
+STORE 0xd -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xd -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xd -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20889 + ?
+else:
+  LOAD R1 <-- 0x20889
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xd -> R0
+LOAD R1 <-- 1
+TEST [0xd] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xe + ?
+else:
+  LOAD R0 <-- 0xe
+STORE 0xe -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xe -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xe -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088a + ?
+else:
+  LOAD R1 <-- 0x2088a
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xe -> R0
+LOAD R1 <-- 1
+TEST [0xe] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xf + ?
+else:
+  LOAD R0 <-- 0xf
+STORE 0xf -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xf -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xf -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088b + ?
+else:
+  LOAD R1 <-- 0x2088b
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xf -> R0
+LOAD R1 <-- 1
+TEST [0xf] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x10 + ?
+else:
+  LOAD R0 <-- 0x10
+STORE 0x10 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x10 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x10 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088c + ?
+else:
+  LOAD R1 <-- 0x2088c
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x10 -> R0
+LOAD R1 <-- 1
+TEST [0x10] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x11 + ?
+else:
+  LOAD R0 <-- 0x11
+STORE 0x11 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x11 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x11 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088d + ?
+else:
+  LOAD R1 <-- 0x2088d
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x11 -> R0
+LOAD R1 <-- 1
+TEST [0x11] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x12 + ?
+else:
+  LOAD R0 <-- 0x12
+STORE 0x12 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x12 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x12 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088e + ?
+else:
+  LOAD R1 <-- 0x2088e
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x12 -> R0
+LOAD R1 <-- 1
+TEST [0x12] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x13 + ?
+else:
+  LOAD R0 <-- 0x13
+STORE 0x13 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x13 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x13 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088f + ?
+else:
+  LOAD R1 <-- 0x2088f
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x13 -> R0
+LOAD R1 <-- 1
+TEST [0x13] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x14 + ?
+else:
+  LOAD R0 <-- 0x14
+STORE 0x14 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x14 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x14 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20890 + ?
+else:
+  LOAD R1 <-- 0x20890
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x14 -> R0
+LOAD R1 <-- 1
+TEST [0x14] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x15 + ?
+else:
+  LOAD R0 <-- 0x15
+STORE 0x15 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x15 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x15 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20891 + ?
+else:
+  LOAD R1 <-- 0x20891
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x15 -> R0
+LOAD R1 <-- 1
+TEST [0x15] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x16 + ?
+else:
+  LOAD R0 <-- 0x16
+STORE 0x16 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x16 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x16 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20892 + ?
+else:
+  LOAD R1 <-- 0x20892
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x16 -> R0
+LOAD R1 <-- 1
+TEST [0x16] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x17 + ?
+else:
+  LOAD R0 <-- 0x17
+STORE 0x17 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x17 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x17 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20893 + ?
+else:
+  LOAD R1 <-- 0x20893
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x17 -> R0
+LOAD R1 <-- 1
+TEST [0x17] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x18 + ?
+else:
+  LOAD R0 <-- 0x18
+STORE 0x18 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x18 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x18 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20894 + ?
+else:
+  LOAD R1 <-- 0x20894
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ce6
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x18 -> R0
+LOAD R1 <-- 1
+TEST [0x18] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x19 + ?
+else:
+  LOAD R0 <-- 0x19
+STORE 0x19 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x19 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 0(0= user input totally parsed)
+TEST R0 == 0 -->R0=0
+if EFLAGS:
+      MEM <- MEM + 0x69
+LOAD_ADDR 0x2087c -> R0
+PREPARE_FUN_ARGS
+CALL FUN final_compression
+PUSH FUN RETURN
+LOAD R0 <-- 0
+STORE 0x0 -> VM_MEM
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x0 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x0 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087c + ?
+else:
+  LOAD R1 <-- 0x2087c
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x0 -> R0
+LOAD R1 <-- 1
+TEST [0x0] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x1 + ?
+else:
+  LOAD R0 <-- 0x1
+STORE 0x1 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x1 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x1 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087d + ?
+else:
+  LOAD R1 <-- 0x2087d
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x1 -> R0
+LOAD R1 <-- 1
+TEST [0x1] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x2 + ?
+else:
+  LOAD R0 <-- 0x2
+STORE 0x2 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x2 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x2 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087e + ?
+else:
+  LOAD R1 <-- 0x2087e
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2 -> R0
+LOAD R1 <-- 1
+TEST [0x2] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x3 + ?
+else:
+  LOAD R0 <-- 0x3
+STORE 0x3 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x3 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x3 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2087f + ?
+else:
+  LOAD R1 <-- 0x2087f
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x3 -> R0
+LOAD R1 <-- 1
+TEST [0x3] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x4 + ?
+else:
+  LOAD R0 <-- 0x4
+STORE 0x4 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x4 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x4 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20880 + ?
+else:
+  LOAD R1 <-- 0x20880
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x4 -> R0
+LOAD R1 <-- 1
+TEST [0x4] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x5 + ?
+else:
+  LOAD R0 <-- 0x5
+STORE 0x5 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x5 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x5 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20881 + ?
+else:
+  LOAD R1 <-- 0x20881
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x5 -> R0
+LOAD R1 <-- 1
+TEST [0x5] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x6 + ?
+else:
+  LOAD R0 <-- 0x6
+STORE 0x6 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x6 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x6 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20882 + ?
+else:
+  LOAD R1 <-- 0x20882
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x6 -> R0
+LOAD R1 <-- 1
+TEST [0x6] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x7 + ?
+else:
+  LOAD R0 <-- 0x7
+STORE 0x7 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x7 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x7 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20883 + ?
+else:
+  LOAD R1 <-- 0x20883
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x7 -> R0
+LOAD R1 <-- 1
+TEST [0x7] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x8 + ?
+else:
+  LOAD R0 <-- 0x8
+STORE 0x8 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x8 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x8 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20884 + ?
+else:
+  LOAD R1 <-- 0x20884
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x8 -> R0
+LOAD R1 <-- 1
+TEST [0x8] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x9 + ?
+else:
+  LOAD R0 <-- 0x9
+STORE 0x9 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x9 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x9 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20885 + ?
+else:
+  LOAD R1 <-- 0x20885
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x9 -> R0
+LOAD R1 <-- 1
+TEST [0x9] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xa + ?
+else:
+  LOAD R0 <-- 0xa
+STORE 0xa -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xa -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xa -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20886 + ?
+else:
+  LOAD R1 <-- 0x20886
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xa -> R0
+LOAD R1 <-- 1
+TEST [0xa] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xb + ?
+else:
+  LOAD R0 <-- 0xb
+STORE 0xb -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xb -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xb -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20887 + ?
+else:
+  LOAD R1 <-- 0x20887
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xb -> R0
+LOAD R1 <-- 1
+TEST [0xb] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xc + ?
+else:
+  LOAD R0 <-- 0xc
+STORE 0xc -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xc -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xc -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20888 + ?
+else:
+  LOAD R1 <-- 0x20888
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xc -> R0
+LOAD R1 <-- 1
+TEST [0xc] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xd + ?
+else:
+  LOAD R0 <-- 0xd
+STORE 0xd -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xd -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xd -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20889 + ?
+else:
+  LOAD R1 <-- 0x20889
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xd -> R0
+LOAD R1 <-- 1
+TEST [0xd] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xe + ?
+else:
+  LOAD R0 <-- 0xe
+STORE 0xe -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xe -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xe -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088a + ?
+else:
+  LOAD R1 <-- 0x2088a
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xe -> R0
+LOAD R1 <-- 1
+TEST [0xe] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0xf + ?
+else:
+  LOAD R0 <-- 0xf
+STORE 0xf -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0xf -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0xf -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088b + ?
+else:
+  LOAD R1 <-- 0x2088b
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0xf -> R0
+LOAD R1 <-- 1
+TEST [0xf] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x10 + ?
+else:
+  LOAD R0 <-- 0x10
+STORE 0x10 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x10 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x10 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088c + ?
+else:
+  LOAD R1 <-- 0x2088c
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x10 -> R0
+LOAD R1 <-- 1
+TEST [0x10] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x11 + ?
+else:
+  LOAD R0 <-- 0x11
+STORE 0x11 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x11 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x11 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088d + ?
+else:
+  LOAD R1 <-- 0x2088d
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x11 -> R0
+LOAD R1 <-- 1
+TEST [0x11] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x12 + ?
+else:
+  LOAD R0 <-- 0x12
+STORE 0x12 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x12 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x12 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088e + ?
+else:
+  LOAD R1 <-- 0x2088e
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x12 -> R0
+LOAD R1 <-- 1
+TEST [0x12] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x13 + ?
+else:
+  LOAD R0 <-- 0x13
+STORE 0x13 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x13 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x13 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x2088f + ?
+else:
+  LOAD R1 <-- 0x2088f
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x13 -> R0
+LOAD R1 <-- 1
+TEST [0x13] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x14 + ?
+else:
+  LOAD R0 <-- 0x14
+STORE 0x14 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x14 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x14 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20890 + ?
+else:
+  LOAD R1 <-- 0x20890
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x14 -> R0
+LOAD R1 <-- 1
+TEST [0x14] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x15 + ?
+else:
+  LOAD R0 <-- 0x15
+STORE 0x15 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x15 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x15 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20891 + ?
+else:
+  LOAD R1 <-- 0x20891
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x15 -> R0
+LOAD R1 <-- 1
+TEST [0x15] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x16 + ?
+else:
+  LOAD R0 <-- 0x16
+STORE 0x16 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x16 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x16 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20892 + ?
+else:
+  LOAD R1 <-- 0x20892
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x16 -> R0
+LOAD R1 <-- 1
+TEST [0x16] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x17 + ?
+else:
+  LOAD R0 <-- 0x17
+STORE 0x17 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x17 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x17 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20893 + ?
+else:
+  LOAD R1 <-- 0x20893
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x17 -> R0
+LOAD R1 <-- 1
+TEST [0x17] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x18 + ?
+else:
+  LOAD R0 <-- 0x18
+STORE 0x18 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x18 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 1(0= user input totally parsed)
+TEST R0 == 0 -->R0=1
+if EFLAGS:
+      MEM <- MEM + 0x69
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x2087c -> R0
+LOAD_ADDR 0x18 -> R1
+TEST [0x2087c] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x20894 + ?
+else:
+  LOAD R1 <-- 0x20894
+LOAD R2 <-- 9516
+PARSE INPUT FILE ; PUT 1BYTE INTO VM_MEMORY 
+PREPARE_FUN_ARGS
+CALL FUN last transformation
+PUSH FUN RETURN
+MEM <-- MEM + 0x0
+LOAD_ADDR 0x18 -> R0
+LOAD R1 <-- 1
+TEST [0x18] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x19 + ?
+else:
+  LOAD R0 <-- 0x19
+STORE 0x19 -> VM_MEM
+MEM <-- MEM + 0xff64
+LOAD_ADDR 0x19 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9512
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da4 + ?
+else:
+  LOAD R1 <-- 0x22da4
+LOAD_ADDR 0x19 -> R1
+LOAD R0 <--- 0(0= user input totally parsed)
+TEST R0 == 0 -->R0=0
+if EFLAGS:
+      MEM <- MEM + 0x69
+LOAD_ADDR 0x2087c -> R0
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555ae7
+PUSH FUN RETURN
+STORE 0x1a -> VM_MEM
+LOAD_ADDR 0x1a -> R0
+LOAD_ADDR 0x20447 -> R1
+TEST [0x20447] -> 0 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x20461 + ?
+else:
+  LOAD R0 <-- 0x20461
+STORE 0x20461 -> VM_MEM
+LOAD_ADDR 0x20444 -> R0
+LOAD_ADDR 0x1a -> R1
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555a57
+PUSH FUN RETURN
+LOAD_ADDR 0x20461 -> R0
+LOAD_ADDR 0x2087c -> R1
+LOAD R2 <-- 9508
+TEST [0x2087c] -> 2 == 255
+if NOT EFLAGS:
+  LOAD R1 <-- 0x22da0 + ?
+else:
+  LOAD R1 <-- 0x22da0
+LOAD_ADDR 0x2 -> R1
+PREPARE_FUN_ARGS
+CALL FUN 0x555555555a57
+PUSH FUN RETURN
+LOAD_ADDR 0x20461 -> R0
+LOAD R1 <-- 3
+TEST [0x20461] -> 1 == 255
+if NOT EFLAGS:
+  LOAD R0 <-- 0x20464 + ?
+else:
+  LOAD R0 <-- 0x20464
+STORE 0x20464 -> VM_MEM
+LOAD_ADDR 0x2087c -> R0
